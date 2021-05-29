@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: my-app-vue
-  name: my-app-vue
+    run: brillar-test-app
+  name: brillar-test-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      run: my-app-vue
+      run: brillar-test-app
   template:
     metadata:
       labels:
-        run: my-app-vue
+        run: brillar-test-app
     spec:
       containers:
-      - image: gcr.io/[PROJECT-ID]/my-app-vue:latest #Replace [PROJECT-ID] accordingly
-        name: my-app-vue
+      - image: gcr.io/gcp-cicd-brillar/brillar-test-app:latest #Replace [PROJECT-ID] accordingly
+        name: brillar-test-app
         ports:
         - containerPort: 8080
