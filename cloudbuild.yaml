@@ -11,7 +11,7 @@ steps:
   args: [
    'build', 
    '-t', 
-   'gcr.io/gcp-cicd-brillar/brillar-test-app:latest',
+   'gcr.io/gcp-cicd-brillar/brillar-test-app:v1.0',
    '.'
   ]
   dir: 'my-app-vue'
@@ -28,12 +28,12 @@ steps:
    'image', 
    'deployment', 
    'brillar-test-app', 
-   'brillar-test-app=gcr.io/gcp-cicd-brillar/brillar-test-app:latest'
+   'brillar-test-app=gcr.io/gcp-cicd-brillar/brillar-test-app:v1.0'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-d'
   - 'CLOUDSDK_CONTAINER_CLUSTER=gke-brillar-test-app'
   # Push the image to Google Container Registry with the latest tag
 images: [
-   'gcr.io/gcp-cicd-brillar/brillar-test-app:latest'
+   'gcr.io/gcp-cicd-brillar/brillar-test-app:v1.0'
   ]
