@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: my-app-vue
+  name: brillar-test-app
 spec:
   selector:
-     run: my-app-vue
+     run: brillar-test-app
   ports:
   - protocol: TCP
     port: 80
